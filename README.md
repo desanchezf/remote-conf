@@ -145,3 +145,11 @@ chmod +x ~/.docker/cli-plugins/docker-compose
 # Checking version
 docker compose version
 ```
+
+### 6.2.1. Fixing *Got permission denied while trying to connect*
+
+Run:
+
+```bash
+sudo chmod 666 /var/run/docker.sock
+```
