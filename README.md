@@ -1,6 +1,10 @@
 
 # Software
 
+### TODO
+- Fix terminal design
+- Develop script
+
 ## 1. Curl
 ```bash
 sudo apt install curl
@@ -16,13 +20,22 @@ PATH=$PATH:$HOME/.local/bin
 
 ```
 
-## 3. Ngrok
+## 3. Heroku
+```bash
+# Installation
+curl https://cli-assets.heroku.com/install.sh | sh
+# Checking the installation
+heroku --version
+```
+
+
+## 4. Ngrok
 ```bash
 snap install ngrok
 ```
 
-## 4. Terminal
-### 4.1. Zsh
+## 5. Terminal
+### 5.1. Zsh
 ```bash
 # Zsh installation
 sudo apt install zsh
@@ -31,12 +44,12 @@ chsh -s $(which zsh) $USER
 # Log out/in to see the results
 ```
 
-### 4.2. OhMyZsh
+### 5.2. OhMyZsh
 ```bash
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-### 4.3. Add config to .zshrc
+### 5.3. Add config to .zshrc
 ```bash
 HISTFILE=“$HOME/.zsh_history”
 HISTSIZE=10000000
@@ -71,23 +84,23 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 echo “Reloaded”
 
 ```
-### 4.4. fzf
+### 5.4. fzf
 ```bash
 # fzf installation and key bindings and fuzzy completions
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 ```
-### 4.5. Power10k [Repo](https://github.com/romkatv/powerlevel10k#for-new-users)
+### 5.5. Power10k [Repo](https://github.com/romkatv/powerlevel10k#for-new-users)
 ```bash
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 ```
-### 4.6. Another Theme [Repo](https://github.com/ChesterYue/ohmyzsh-theme-passion)
+### 5.6. Another Theme [Repo](https://github.com/ChesterYue/ohmyzsh-theme-passion)
 ![Passion Theme](./img/passion-theme.png)
 
 
-## 5. Docker
-### 5.1. Setup repository
+## 6. Docker
+### 6.1. Setup repository
 ```bash
 # Uninstall older versions
 sudo apt-get remove docker docker-engine docker.io containerd runc
@@ -107,7 +120,10 @@ echo \
 "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
 $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
-### 5.2. Install Docker engine and Docker compose
+### 6.2. Install Docker engine and Docker compose
+
+Installing docker engine
+
 ```bash
 # Update package index
 sudo apt-get update
@@ -115,4 +131,17 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 # Test the installation
 sudo docker run hello-world
-    ```
+```
+
+Installing docker compose
+
+```bash
+# Creating directory
+mkdir -p ~/.docker/cli-plugins/
+# Downloading docker-compose package
+curl -SL https://github.com/docker/compose/releases/download/v2.3.3/docker-compose-linux-x86_64 -o ~/.docker/cli-plugins/docker-compose
+# Setting permisions
+chmod +x ~/.docker/cli-plugins/docker-compose
+# Checking version
+docker compose version
+```
