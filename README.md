@@ -1,9 +1,9 @@
 
-# Software
+# <center>Software</center>
 
 ### TODO
-- Fix terminal design
-- Develop script
+- Add terminal design
+- Add python script
 
 ## 1. Curl
 ```bash
@@ -152,4 +152,16 @@ Run:
 
 ```bash
 sudo chmod 666 /var/run/docker.sock
+```
+
+### 7. NodeJS y NPM
+
+```bash
+# Install NodeJS
+sudo apt install nodejs
+# Install npm
+sudo apt install npm
+# Checking the installation
+nodejs --version
+npm --version
 ```
