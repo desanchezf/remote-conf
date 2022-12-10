@@ -1,5 +1,5 @@
 
-# <center>Software</center>
+# <center>Ubuntu 22.04.1 LTS</center>
 
 ### TODO
 - Add terminal design
@@ -154,7 +154,7 @@ Run:
 sudo chmod 666 /var/run/docker.sock
 ```
 
-### 7. NodeJS y NPM
+## 7. NodeJS y NPM
 
 ```bash
 # Install NodeJS
@@ -165,3 +165,23 @@ sudo apt install npm
 nodejs --version
 npm --version
 ```
+
+## 8. Typescript
+
+```bash
+# Install npm previously
+sudo npm install -g typescript
+# Checking installation
+tsc
+```
+
+
+# <center>Windows 11</center>
+
+## 1. Python3 & pip3
+## 2. Docker
+## 3. Terminal
+## 4. Ngrok
+## 5. Heroku
+## 6. NodeJS & npm
+## 7. Typescript
