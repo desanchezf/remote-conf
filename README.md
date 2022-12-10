@@ -181,6 +181,15 @@ tsc
 ## 1. Python3 & pip3
 ## 2. Docker
 ## 3. Terminal
+### 3.1. Install WSL2 & Ubuntu
+· Install WSL
+```bash
+wsl --install # Restart the computer after this command
+```
+
+
+· Set WSL to WSL2
+· Install Ubuntu through [Microsoft Store](https://www.microsoft.com/store/productId/9PDXGNCFSCZV)
 ## 4. Ngrok
 ## 5. Heroku
 ## 6. NodeJS & npm
