@@ -178,6 +178,11 @@ nodejs --version
 npm --version
 ```
 
+## 8. Yarn
+```bash
+sudo npm install -g yarn
+```
+
 ## 8. Typescript
 
 ```bash
