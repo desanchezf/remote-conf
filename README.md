@@ -248,7 +248,7 @@ You can see themes names in the following path:
 C:\Users\$USER\AppData\Local\Programs\oh-my-posh\themes
 ```
 
-![terminal](.\img\terminal.png)
+![terminal](.\img/terminal.png)
 
 
 ## 5. Ngrok
