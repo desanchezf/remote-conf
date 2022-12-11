@@ -5,6 +5,18 @@
 - Add terminal design
 - Add python script
 
+## Notes
+If a repo (running sudo apt update) update fails throwing the following message:
+```bash
+Err:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease Temporary failure resolving 'archive.ubuntu.com'
+```
+Run this console command:
+```bash
+echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf > /dev/null
+```
+
+It is becase of DNS problem
+
 ## 1. Curl
 ```bash
 sudo apt install curl
@@ -179,18 +191,96 @@ tsc
 # <center>Windows 11</center>
 
 ## 1. Python3 & pip3
-## 2. Docker
-## 3. Terminal
-### 3.1. Install WSL2 & Ubuntu
-· Install WSL
+Download through the official [Python](https://www.python.org/downloads/) website
+
+## 2. Gestor de Paquetes Chocolatey
+Run this command:
+```ps1
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+```
+
+## 3. Docker & Docker compose
+Install through Chocolatey with this command:
+```ps1
+chocolatey install docker-engine
+```
+## 4. Terminal
+### 4.1. Install Windows Terminal and Update Powershell
+· Install [Windows Terminal](https://www.microsoft.com/store/productId/9N0DX20HK701)
+· Update Powershell to the [last version](https://www.microsoft.com/store/productId/9MZ1SNWT0N5D)
+
+### 4.2. Install Oh My Posh
+· Get through [Microsoft Store](https://apps.microsoft.com/store/detail/XP8K0HKJFRXGCK) or using this winget command:
+```ps1
+winget install JanDeDobbeleer.OhMyPosh -s winget
+```
+
+· To upgrade Oh My Posh, run:
+```ps1
+winget upgrade JanDeDobbeleer.OhMyPosh -s winget
+```
+· Download Fonts & Install Fonts
+Download fonts in [NerdFonts](https://www.nerdfonts.com/) and change in appaerance options:
+
+![Terminal Appaerance](.\img/appaerance.png)
+
+· Download Themes:
+Use this command to download themes:
+```ps1
+Get-PoshThemes
+```
+· Apply themes:
+Open profile file with:
+```ps1
+code $PROFILE
+```
+and add the following line to the file:
+```ps1
+oh-my-posh init pwsh --config 'C:\Users\david\AppData\Local\Programs\oh-my-posh\themes\[THEME_NAME].omp.json' | Invoke-Expression
+```
+for example:
+```ps1
+oh-my-posh init pwsh --config 'C:\Users\david\AppData\Local\Programs\oh-my-posh\themes\bubbles.omp.json' | Invoke-Expression
+```
+
+You can see themes names in the following path:
+```ps1
+C:\Users\$USER\AppData\Local\Programs\oh-my-posh\themes
+```
+
+![terminal](.\img\terminal.png)
+
+
+## 5. Ngrok
+```ps1
+chocolatey install ngrok
+```
+## 6. Heroku
+```ps1
+chocolatey isntall heroku-cli
+```
+## 7. NodeJS & npm
+Install through the official website or use this Chocolatey command:
+```ps1
+chocolatey install nodejs
+```
+## 8. Typescript
 ```bash
-wsl --install # Restart the computer after this command
+npm install -g typescript
+```
+
+## 9. Package manager
+Use winget as a package manager for example to update packages:
+```ps1
+winget update [specific-package]/-all
 ```
 
 
-· Set WSL to WSL2
-· Install Ubuntu through [Microsoft Store](https://www.microsoft.com/store/productId/9PDXGNCFSCZV)
-## 4. Ngrok
-## 5. Heroku
-## 6. NodeJS & npm
-## 7. Typescript
+# <center>Blablabla gimme scripts (WIP 😉)</center>
+
+## Ubuntu 22.04 Script
+```bash
+```
+## W11 Script
+```ps1
+```
