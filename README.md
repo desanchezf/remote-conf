@@ -94,8 +94,18 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 echo “Reloaded”
-
 ```
+
+If this appears everytime that a terminal is opened:
+
+![terminal-warning](./img/terminal-warning.png)
+
+open the file: ```~/.p10.zsh``` and set the variable value to the following:
+
+```bash
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+```
+
 ### 5.4. fzf
 ```bash
 # fzf installation and key bindings and fuzzy completions
@@ -105,7 +115,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ### 5.5. Power10k [Repo](https://github.com/romkatv/powerlevel10k#for-new-users)
 ```bash
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
 ```
 ### 5.6. Another Theme [Repo](https://github.com/ChesterYue/ohmyzsh-theme-passion)
 ![Passion Theme](./img/passion-theme.png)
