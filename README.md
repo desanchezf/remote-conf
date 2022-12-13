@@ -42,9 +42,16 @@ heroku --version
 
 
 ## 4. Ngrok
+Install ngrok
 ```bash
 snap install ngrok
 ```
+
+Login into a Ngrok account:
+```bash
+ngrok config add-authtoken [authtoken]
+```
+
 
 ## 5. Terminal
 ### 5.1. Zsh
