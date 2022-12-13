@@ -176,6 +176,21 @@ Run:
 sudo chmod 666 /var/run/docker.sock
 ```
 
+### 6.2.2. Fixing *docker.credentials.errors.InitializationError: docker-credential-desktop not installed or not available in PATH*
+
+Open the file ~/.docker/config.json, delete all the content and paste this:
+
+```json
+{
+  "stackOrchestrator" : "swarm",
+  "experimental" : "disabled",
+  "credStore" : "desktop"
+}
+```
+Run the command normally:
+
+
+
 ## 7. NodeJS y NPM
 
 ```bash
