@@ -6,7 +6,22 @@
 - Add python script
 
 ## Notes
-If a repo (running sudo apt update) update fails throwing the following message:
+
+· Screen sharing (on Slack):
+
+By default in Ubuntu (22.04/10) it is not possible to share your screen if you
+try it, you only will see a black screen with the cursor. To solve this, you must
+comment this line on this file:
+
+```bash
+sudo nano /etc/gdm3/custom.conf
+
+WaylandEnable=false
+```
+*If you uncomment this line your touchpad gestures won't work because potatoe*
+
+
+· If a repo (running sudo apt update) update fails throwing the following message:
 ```bash
 Err:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease Temporary failure resolving 'archive.ubuntu.com'
 ```
