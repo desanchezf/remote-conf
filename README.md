@@ -143,6 +143,25 @@ echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
 ![Passion Theme](./img/passion-theme.png)
 
 
+### 5.7. Work-init ([Repo](https://github.com/desanchezf/work-init))
+
+Is a simple bash script to run the following programs:
+
+- Chrome
+- Spotify
+- Visual Studio Code
+- Microsoft Teams
+- Slack
+- Geary
+- Postman
+
+- Notes:
+  * edit work.sh to allow execution with ```chmod u+x work.sh```
+  * set custom alias at .bashrc or .zshrc to run this script with a single terminal command, for example:
+    ```bash
+      alias work="~/code/work-init/work.sh"
+    ```
+
 ## 6. Docker
 ### 6.1. Setup repository
 ```bash
