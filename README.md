@@ -337,6 +337,12 @@ C:\Users\$USER\AppData\Local\Programs\oh-my-posh\themes
 ![terminal](.\img/terminal.png)
 
 
+### 4.3. Install fzf
+Get fzf via Chocolatey package manager with this command:
+```ps1
+choco install fzf
+```
+
 ## 5. Ngrok
 ```ps1
 chocolatey install ngrok
