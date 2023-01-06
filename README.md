@@ -258,6 +258,21 @@ sudo npm install -g typescript
 tsc
 ```
 
+### 8.1. Run files in a single step
+
+Install tsc-node:
+
+```bash
+npm install -g ts-node
+```
+
+Run the following command:
+
+```bash
+tsc-node [file_name].ts
+```
+
+
 
 # <center>Windows 11</center>
 
