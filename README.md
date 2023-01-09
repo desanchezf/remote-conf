@@ -183,7 +183,23 @@ echo \
 "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
 $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
-### 6.2. Install Docker engine and Docker compose
+
+### 6.2. Install docker desktop
+
+It includes:
+  - Docker Engine
+  - Docker CLI client
+  - Docker Buildx
+  - Docker Compose
+  - Docker Content Trust
+  - Kubernetes
+  - Credential Helper
+
+Download and install .deb package from [Docker](https://docs.docker.com/desktop/install/ubuntu/)
+
+To login with your Docker accounts you must get GPG credentials
+
+### 6.3. Install Docker engine and Docker compose
 
 Installing docker engine
 
@@ -209,7 +225,7 @@ chmod +x ~/.docker/cli-plugins/docker-compose
 docker compose version
 ```
 
-### 6.2.1. Fixing *Got permission denied while trying to connect*
+### 6.3.1. Fixing *Got permission denied while trying to connect*
 
 Run:
 
@@ -217,7 +233,7 @@ Run:
 sudo chmod 666 /var/run/docker.sock
 ```
 
-### 6.2.2. Fixing *docker.credentials.errors.InitializationError: docker-credential-desktop not installed or not available in PATH*
+### 6.3.2. Fixing *docker.credentials.errors.InitializationError: docker-credential-desktop not installed or not available in PATH*
 
 Open the file ~/.docker/config.json, delete all the content and paste this:
 
