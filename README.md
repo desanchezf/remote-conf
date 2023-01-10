@@ -273,7 +273,30 @@ sudo npm install -g typescript
 # Checking installation
 tsc
 ```
+## 9. PgAdmin4
+```bash
+# Install the public key for the repository (if not done previously):
+curl -fsS https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo gpg --dearmor -o /usr/share/keyrings/packages-pgadmin-org.gpg
 
+# Create the repository configuration file:
+sudo sh -c 'echo "deb [signed-by=/usr/share/keyrings/packages-pgadmin-org.gpg] https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
+
+# Install for both desktop and web modes:
+sudo apt install pgadmin4
+
+# Install for desktop mode only:
+sudo apt install pgadmin4-desktop
+
+# Install for web mode only:
+sudo apt install pgadmin4-web
+
+# Configure the webserver, if you installed pgadmin4-web:
+sudo /usr/pgadmin4/bin/setup-web.sh
+```
+## 10. Git Kraken
+
+Download from the official [official webpage](https://www.gitkraken.com/) (.deb), and
+install it.
 
 # <center>Windows 11</center>
 
@@ -361,28 +384,6 @@ Use winget as a package manager for example to update packages:
 ```ps1
 winget update [specific-package]/-all
 ```
-
-## 10. PgAdmin4
-```bash
-# Install the public key for the repository (if not done previously):
-curl -fsS https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo gpg --dearmor -o /usr/share/keyrings/packages-pgadmin-org.gpg
-
-# Create the repository configuration file:
-sudo sh -c 'echo "deb [signed-by=/usr/share/keyrings/packages-pgadmin-org.gpg] https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
-
-# Install for both desktop and web modes:
-sudo apt install pgadmin4
-
-# Install for desktop mode only:
-sudo apt install pgadmin4-desktop
-
-# Install for web mode only:
-sudo apt install pgadmin4-web
-
-# Configure the webserver, if you installed pgadmin4-web:
-sudo /usr/pgadmin4/bin/setup-web.sh
-```
-
 
 # <center>Blablabla gimme scripts (WIP 😉)</center>
 
