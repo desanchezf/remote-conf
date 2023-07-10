@@ -260,6 +260,34 @@ nodejs --version
 npm --version
 ```
 
+### 7.1. NVM (*Node Version Manager*)
+
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+```
+
+if this error appears:
+
+```bash
+You have $NVM_DIR set to "“/home/david/.nvm”", but that directory does not exist. Check your profile files and environment.
+```
+
+run:
+
+```bash
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+```
+and then run the first command again, you can try it running:
+
+```bash
+nvm
+```
+
+
+
+
+
 ## 8. Yarn
 ```bash
 sudo npm install -g yarn
